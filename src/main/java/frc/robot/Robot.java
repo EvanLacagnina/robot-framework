@@ -101,7 +101,7 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void autonomousPeriodic() {
-        if (timer.get() < 3) {
+        if (m_timer.get() < 3) {
             m_drive.arcadedrive(0.5,0);
         }
         else {
