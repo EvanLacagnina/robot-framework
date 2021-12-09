@@ -41,7 +41,7 @@ public class Robot extends TimedRobot {
 
     // timer
     
-    private Timer = m_timer = new Timer();
+    private Timer m_timer = new Timer();
 
 
     // SparkMax setup
