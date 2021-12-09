@@ -35,10 +35,13 @@ public class Robot extends TimedRobot {
     private CANSparkMax m_rightPrimary = initController(CAN.driveRightPrimary);
     private CANSparkMax m_leftFollower = initController(CAN.driveLeftFollower);
     private CANSparkMax m_rightFollower = initController(CAN.driveRightFollower);
+
     //  creates Differential Drive object
-    private DifferentialDrive m_drive = new DifferentialDrive(m_leftPrimary, m_rightPrimary,);
+    private DifferentialDrive m_drive = new DifferentialDrive(m_leftPrimary, m_rightPrimary);
+
     // timer
     private Timer = m_timer = new Timer();
+    
     // SparkMax setup
     private CANSparkMax initController(int port) {
         CANSparkMax controller = new CANSparkMax(port, MotorType.kBrushless);
