@@ -31,6 +31,26 @@ import static frc.robot.Constants.*;
  */
 public class Robot extends TimedRobot {
     // defines the motors and runs initalization code
+private CANSparkMax = m_leftPrimary = initController(CAN.driveLeftPrimary);
+private CANSparkMax = m_rightPrimary = initController(CAN.driveRightPrimary);
+private CANSparkMax = m_leftFollower = initController(CAN.driveLeftFollower);
+private CANSparkMax = m_rightFollower = initController(CAN.driveRightFollower);
+
+private Timer m_timer =  new timer();
+
+private CANSparkMax initController(int port) { 
+    CANSparkmax controler = new CANSparkMax(port, MotorType.kBrushless);
+    controller.restoreFactoryDefaults();
+    controller.setIdleMode(IdleMode.kBrake);
+    return controller;
+}
+@Override
+public void robotInit() { 
+    m_leftFollower.follow(m_leftPrimary);
+    m_rightFollower.follow(m_rightPrimary);
+}
+
+
 
     //  creates Differential Drive object
 
