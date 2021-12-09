@@ -40,8 +40,10 @@ public class Robot extends TimedRobot {
     private DifferentialDrive m_drive = new DifferentialDrive(m_leftPrimary, m_rightPrimary);
 
     // timer
-    private Timer = m_timer = new Timer();
     
+    private Timer = m_timer = new Timer();
+
+
     // SparkMax setup
     private CANSparkMax initController(int port) {
         CANSparkMax controller = new CANSparkMax(port, MotorType.kBrushless);
@@ -99,7 +101,7 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void autonomousPeriodic() {
-        if (timer.get() < 2) {
+        if (timer.get() < 3) {
             m_drive.arcadedrive(0.5,0);
         }
         else {
