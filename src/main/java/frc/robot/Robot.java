@@ -39,7 +39,7 @@ private CANSparkMax m_rightFollower = initController(CAN.driveRightFollower);
     //  creates Differential Drive object
 private DifferentialDrive m_drive = new DifferentialDrive (m_leftPrimary, m_rightPrimary);
     // timer
-private Timer m_timer = new Timer()
+private Timer m_timer = new Timer();
     // SparkMax setup
     private CANSparkMax initController(int port) {
         CANSparkMax controller = new CANSparkMax(port, MotorType.kBrushless);
@@ -55,7 +55,7 @@ private Timer m_timer = new Timer()
     @Override
     public void robotInit() {
         m_driveLeftFollower.follow(m.m_leftPrimary);
-         m_driveLeftFollower.follow(m.m_leftPrimary);
+        m_driveLeftFollower.follow(m.m_leftPrimary);
 
     }
 
