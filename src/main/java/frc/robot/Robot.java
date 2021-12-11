@@ -89,9 +89,10 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void autonomousInit() {
+            m_timer.reset();
+        m_timer.start();
     }
-    m_timer.reset();
-    m_timer.start();
+
     /**
      * This function is called periodically during autonomous.
      */
