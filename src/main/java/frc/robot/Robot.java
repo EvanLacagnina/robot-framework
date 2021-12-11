@@ -55,7 +55,7 @@ private Timer m_timer = new Timer ();
      */
     @Override
     public void robotInit() {
-        m.leftfollower.follow(m_leftPrimary);
+        m_leftFollower.follow(m_leftPrimary);
         m_rightFollower.follow(m_rightPrimary);
     }
 
