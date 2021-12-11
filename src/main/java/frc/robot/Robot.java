@@ -32,9 +32,9 @@ import static frc.robot.Constants.*;
 public class Robot extends TimedRobot {
     // defines the motors and runs initalization code
     private CANSparkMax m_leftPrimary = initController(CAN.driveLeftPrimary);
-    private CANSparkMax m_leftPrimary = initController(CAN.driveRightPrimary);
-    private CANSparkMax m_leftPrimary = initController(CAN.driveLeftFollower);
-    private CANSparkMax m_leftPrimary = initController(CAN.driveRightFollower);
+    private CANSparkMax m_rightPrimary = initController(CAN.driveRightPrimary);
+    private CANSparkMax m_leftFollower = initController(CAN.driveLeftFollower);
+    private CANSparkMax m_rightFollower = initController(CAN.driveRightFollower);
 
     //  creates Differential Drive object
     private DifferentialDrive m_drive = new DifferentialDrive(m_leftPrimary, m_rightPrimary);
