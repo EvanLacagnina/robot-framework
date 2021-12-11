@@ -31,10 +31,10 @@ import static frc.robot.Constants.*;
  */
 public class Robot extends TimedRobot {
     // defines the motors and runs initalization code
-private CANSparkMax m_leftPrimary = initController(CANdriveLeftPrimary);
-private CANSparkMax m_rightPrimary = initController(CANdriveRightPrimary);
-private CANSparkMax m_leftFollower = initController(CANdriveLeftPrimary);
-private CANSparkMax m_rightFollower = initController(CANdriveRightPrimary);
+private CANSparkMax m_leftPrimary = initController(CAN.driveLeftPrimary);
+private CANSparkMax m_rightPrimary = initController(CAN.driveRightPrimary);
+private CANSparkMax m_leftFollower = initController(CAN.driveLeftPrimary);
+private CANSparkMax m_rightFollower = initController(CAN.driveRightPrimary);
     //  creates Differential Drive object
 private DifferentialDrive m_drive = new DifferentialDrive(m_leftPrimary, m_rightPrimary);
     // timer
@@ -96,7 +96,7 @@ private Timer m_timer = new Timer();
     @Override
     public void autonomousPeriodic() {
         if (m_timer.get() < 2){
-            m_drive.arcade.Drive(0.5,0);
+            m_drive.arcadeDrive(0.5,0);
         }
         else{
             m_drive.stopMotor();
