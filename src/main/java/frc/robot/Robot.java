@@ -91,7 +91,7 @@ public class Robot extends TimedRobot {
     public void autonomousInit() {
     }
     m_timer.reset();
-    m_time.start();
+    m_timer.start();
     /**
      * This function is called periodically during autonomous.
      */
