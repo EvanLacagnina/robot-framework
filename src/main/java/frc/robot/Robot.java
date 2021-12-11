@@ -53,10 +53,11 @@ private Timer m_timer = new Timer();
      */
     @Override
     public void robotInit() {
+        m_leftFollower.follow(m_leftPrimary);
+        m_rightFollower.follow(m_rightPrimary);
     }
-m_leftFollower.follow(m_leftPrimary);
-m_rightFollower.follow(m_rightPrimary);
     /**
+
      * This function is called every robot packet, no matter the mode. Use this for
      * items like diagnostics that you want ran during disabled, autonomous,
      * teleoperated and test.
