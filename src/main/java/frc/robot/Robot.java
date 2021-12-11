@@ -89,8 +89,8 @@ private Timer m_timer = new Timer();
      */
     @Override
     public void autonomousInit() {
-        m.timer.reset();
-        m.timer.start();
+        m_timer.reset();
+        m_timer.start();
     }
 
     /**
