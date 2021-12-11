@@ -40,7 +40,7 @@ public class Robot extends TimedRobot {
     private DifferentialDrive m_drive = new DifferentialDrive(m_leftPrimary, m_rightPrimary);
 
     // timer
-    private Timer m_Timer = new Timer();
+    private Timer m_timer = new Timer();
 
     // SparkMax setup
     private CANSparkMax initController(int port) {
@@ -90,7 +90,7 @@ public class Robot extends TimedRobot {
     @Override
     public void autonomousInit() {
             m_timer.reset();
-        m_timer.start();
+          m_timer.start();
     }
 
     /**
