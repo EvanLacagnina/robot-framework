@@ -19,9 +19,10 @@ import edu.wpi.first.wpilibj.geometry.Pose2d;
 import edu.wpi.first.wpilibj.geometry.Rotation2d;
 import edu.wpi.first.wpilibj.kinematics.DifferentialDriveOdometry;
 import edu.wpi.first.wpilibj.kinematics.DifferentialDriveWheelSpeeds;
+import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.Timer;
 
-import static frc.robot.Constants.*;
+import static frc.robot.Constants.CAN.*;
 /**
  * The VM is configured to automatically run this class, and to call the
  * functions corresponding to each mode, as described in the TimedRobot
@@ -31,10 +32,10 @@ import static frc.robot.Constants.*;
  */
 public class Robot extends TimedRobot {
     // defines the motors and runs initalization code
-    private CANSparkMax m_leftPrimary = initController(CAN.driveLeftPrimary);
-    private CANSparkMax m_rightPrimary = initController(CAN.driveRightPrimary);
-    private CANSparkMax m_leftFollower = initController(CAN.driveLeftFollower);
-    private CANSparkMax m_rightFollower = initController(CAN.driveRightFollower);
+    private CANSparkMax m_leftPrimary = initController(driveLeftPrimary);
+    private CANSparkMax m_rightPrimary = initController(driveRightPrimary);
+    private CANSparkMax m_leftFollower = initController(driveLeftFollower);
+    private CANSparkMax m_rightFollower = initController(driveRightFollower);
 
     //  creates Differential Drive object
     private DifferentialDrive m_drive = new DifferentialDrive(m_leftPrimary, m_rightPrimary);
