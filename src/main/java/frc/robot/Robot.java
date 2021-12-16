@@ -35,6 +35,7 @@ private CANSparkMax m_leftPrimary = initController(CAN.driveLeftPrimary);
 private CANSparkMax m_rightPrimary = initController(CAN.driveRightPrimary);
 private CANSparkMax m_leftFollower = initController(CAN.driveLeftFollower);
 private CANSparkMax m_rightFollower = initController(CAN.driveRightFollower);
+private CANSparkMax m_spinner = initController(CAN.kSpinnerLeftRight);
 
  //  creates Differential Drive object
 private DifferentialDrive m_drive = new DifferentialDrive(m_leftPrimary, m_rightPrimary);
@@ -104,7 +105,17 @@ private Timer m_timer = new Timer ();
         else {
             m_drive.stopMotor();
         }
+        
+        if (m_timer.get() < 2) {
+            // spin the motor for 2s 
+            m_spinner.set(1.0);
+        }
+        else {
+            // stop the spinning
+            m_spinner.stopMotor();
+        }
     }
+
 
     @Override
     public void teleopInit() {
