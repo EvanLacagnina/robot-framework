@@ -93,10 +93,10 @@ public class Robot extends TimedRobot {
     @Override
     public void autonomousPeriodic() {
         if (m_timer.get() <= 5) {
-            spinner.set(0.5);
+            spinner.set(1);
         }
         else if (m_timer.get() > 5 |timer.get() <= 10) {
-            spinner.set(-0.5);
+            spinner.set(-1);
         }
         else {
             spinner.set(0);
