@@ -31,7 +31,7 @@ import static frc.robot.Constants.*;
  */
 public class Robot extends TimedRobot {
     // defines the motors and runs initalization code
-    private CANSparkMax m_Spinner = new CANSparkMax(frc.robot.Constants.kSpinnerLeftRight, MotorType.kBrushless); // do the thing
+    private CANSparkMax m_Spinner = new CANSparkMax(Constants.kSpinnerLeftRight, MotorType.kBrushless); // do the thing
     //  creates Differential Drive object
 
     // timer
