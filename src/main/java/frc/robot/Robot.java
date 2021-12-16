@@ -96,7 +96,7 @@ public class Robot extends TimedRobot {
             m_Spinner.set(0.5);
         } else {
             m_Spinner.set(0);
-        } // make the thing spin for 2 second
+        } // make the thing spin for 2 seconds
     }
 
     @Override
