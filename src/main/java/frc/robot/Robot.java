@@ -35,9 +35,10 @@ public class Robot extends TimedRobot {
     private CANSparkMax m_rightPrimary = initController(CAN.driveRightPrimary);
     private CANSparkMax m_leftFollower = initController(CAN.driveLeftFollower);
     private CANSparkMax m_rightFollower = initController(CAN.driveRightFollower);
+    priavte CANSparkMax m_spinnerleftRight = initController(CAN.kSpinnerLeftRight);
 
     //  creates Differential Drive object
-    private DifferentialDrive m_drive = new DifferentialDrive(m_leftPrimary, m_rightPrimary);
+    private DifferentialDrive m_drive = new DifferentialDrive(driveLeftPrimary. driveRightPriamry);
 
     // timer
     
@@ -101,11 +102,14 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void autonomousPeriodic() {
-        if (m_timer.get() < 3) {
-            m_drive.arcadedrive(0.5,0);
+        if ((m_timer.get() / 5) % 2 == 0) {
+            m_spinnerleftRight.set(.5);
+        }
+        else if ((m_timer.get() / 5) % 2 == 1) {
+            m_spinnerleftRight.set(-.5);
         }
         else {
-            m_drive.stopMotor();
+            
         }
     }
 
