@@ -31,14 +31,12 @@ import static frc.robot.Constants.*;
  */
 public class Robot extends TimedRobot {
     // defines the motors and runs initalization code
-    priavte CANSparkMax m_spinnerLeftRight = initController(CAN.kSpinnerLeftRight);
+    priavte CANSparkMax spinner = initController(CAN.kSpinnerLeftRight);
 
     //  creates Differential Drive object
 
     // timer
-    
     private Timer m_timer = new Timer();
-
     // SparkMax setup
     private CANSparkMax initController(int port) {
         CANSparkMax controller = new CANSparkMax(port, MotorType.kBrushless);
@@ -94,14 +92,14 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void autonomousPeriodic() {
-        if ((m_timer.get() / 5) % 2 == 0) {
-            m_spinnerLeftRight.set(0.5);
+        if (m_timer.get() <= 5) {
+            spinner.set(0.5);
         }
-        else if ((m_timer.get() / 5) % 2 == 1) {
-            m_spinnerLeftRight.set(-0.5);
+        else if (m_timer.get() > 5 || m_timer.get() <= 10) {
+            spinner.set(-0.5);
         }
         else {
-            m_spinnerLeftRight.stopMotor();
+            spinner.stopMotor();
         }
     }
 
