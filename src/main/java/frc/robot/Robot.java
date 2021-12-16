@@ -99,7 +99,7 @@ public class Robot extends TimedRobot {
             spinner.set(-0.5);
         }
         else {
-            spinner.stopMotor();
+            spinner.set(0);
         }
     }
 
