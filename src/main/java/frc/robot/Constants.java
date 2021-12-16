@@ -8,6 +8,5 @@ public class Constants {
         public static final int driveRightFollower = 14;
 
         public static final int kSpinnerLeftRight = 41;
-        public static final int kSpinnerUpDown = 42;
     }
 }
