@@ -99,7 +99,7 @@ private Timer m_timer = new Timer();
      */
     @Override
     public void autonomousPeriodic() {
-    if(m_timer <= 10){
+    if(m_timer.get() <= 10){
         spinner.set(0.75);
     }else{spinner.stopMotor();}
     }
